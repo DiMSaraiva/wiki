@@ -1,39 +1,38 @@
 export const firstRow = [
     {
-        title: "Build a dApp on zkEVM",
-        linkUrl: "docs/zkevm/develop",
+        title: "Build Secure Solutions",
+        linkUrl: "/docs/zkevm/develop",
         imageUrl: "img/logo-round-dark.png",
-        description: "Empower the world by building next-gen dApps using ZK tech."
+        description: "Build highly scalable and secure applications using ZK tech."
     },
     {
-        title: "Try the New CDK Validium",
-        linkUrl: "docs/cdk/quickstart/",
+        title: "Learn about the CDK",
+        linkUrl: "/docs/cdk/what-is-polygon-cdk/",
         imageUrl: "img/logo-round-dark.png",
-        description: "Empower the world by building next-gen app-chains using the new Polygon development kit."
+        description: "Learn how you can build next-gen app-chains using the new Polygon chain development kit."
     },
     {
-        title: "Build a Supernet",
-        linkUrl: "/docs/category/build-a-supernet",
+        title: "Build Modular & Custom Solutions",
+        linkUrl: "/docs/cdk/validium/quickstart/",
         imageUrl: "img/logo-round-dark.png",
-        description: "Learn how to build a fully-fleged app-chain with Polygon Supernets."
+        description: "Build next-gen app-chains using the new Polygon chain development kit."
     },
     {
         title: "Run a PoS node",
-        linkUrl: "docs/category/operate-a-node",
+        linkUrl: "/docs/category/operate-a-node",
         imageUrl: "img/logo-round-dark.png",
         description: "Contribute to decentralized computing by running your own PoS node."
     },
     {
         title: "Run a zkEVM node",
-        linkUrl: "docs/zkevm/setup-production-node",
+        linkUrl: "/docs/zkevm/setup-production-node",
         imageUrl: "img/logo-round-dark.png",
         description: "Contribute to decentralized computing by running your own ZK node."
     },
     {
         title: "Run a Miden VM",
-        linkUrl: "docs/miden/user_docs/usage",
+        linkUrl: "/docs/miden/user_docs/usage",
         imageUrl: "img/logo-round-dark.png",
         description: "Contribute to decentralized computing by running a Miden VM."
     },
 ];
-

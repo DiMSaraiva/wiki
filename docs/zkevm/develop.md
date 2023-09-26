@@ -1,6 +1,6 @@
 ---
 id: develop
-title: Quickstart to Polygon zkEVM
+title: Get Started with Polygon zkEVM
 sidebar_label: Quickstart
 description: Polygon zkEVM provides a complete EVM-like experience for Developers and Users alike. Simply switch to the zkEVM network and start building on a network with much higher throughput and lower fees.
 keywords:
@@ -10,6 +10,53 @@ keywords:
   - deploy smart contracts
   - connecting to zkEVM
 ---
+
+# ETHGlobal NYC Hackathon
+---
+# Kickstart Your Journey with zkEVM
+
+Welcome! Embark on your journey by following the steps below to deploy dApps and secure your chance to win bounties! If assistance is required, make your way to the Polygon booth or connect with the team in the ETHGlobal Polygon Discord channel.
+
+---
+## Step 1: Quickstart
+---
+
+Deploy a sample application swiftly and interact seamlessly with the zkEVM network by following the steps outlined below:
+
+### Link and Launch: Execute a Sample dApp
+
+1. **[<ins>Connect your wallet to the zkEVM network</ins>](#connecting-to-zkevm)** to initiate interaction with the network.
+2. **[<ins>Deploy a demo smart contract to zkEVM</ins>](#deploying-smart-contracts)** as a quick way to get started, and then consider exploring **[<ins>more smart contract examples</ins>](/docs/category/smart-contracts/)** for a deeper dive into deploying to zkEVM.
+
+---
+## Step 2: Acquire Testnet ETH
+---
+
+Refer to the **[<ins>Faucet Guide</ins>](/docs/zkevm/guides/zkevm-faucet/#using-the-polygon-zketh-faucet)** to acquire Testnet ETH. After securing some, you have the option to **[<ins>bridge some of your Goerli tokens</ins>](/docs/zkevm/bridge-to-zkevm/)** or initiate a request via XMTP.
+
+---
+## [BONUS] Step 3: Enhance the LXLY Bridge Implementation
+---
+
+Develop and refine the LXLY sample implementation by incorporating support for various types of cross-chain messaging and asset transfers.
+You can explore the [code samples](https://github.com/0xPolygonHermez/code-examples) and refer to the specifications of the bridge 
+**[<ins>here</ins>](/docs/category/zkevm-bridge/)** for comprehensive information.
+
+---
+## Step 4: Dive into Polygon ID
+---
+
+Lastly, delve into the **[<ins>official Polygon ID developer documentation</ins>](https://devs.polygonid.com/)** to learn the intricacies of verifying and issuing credentials. To begin, you will need to establish a Polygon ID wallet. Achieve this by following the **[<ins>Quickstart Demo</ins>](https://devs.polygonid.com/docs/quick-start-demo/)** and proceed with the guide to issue credentials.
+
+When you're ready, explore these code samples demonstrating Verifiable Credential Issuance and Verification:
+
+- [Lens ID Issuer](https://github.com/teeolendo/lens-id/)
+- [VC Gated Dapp](https://github.com/oceans404/fullstack-polygon-id-vc-gated-dapp)
+
+---
+---
+
+# zkEVM Quickstart
 
 :::caution Risks
 
@@ -65,6 +112,28 @@ Here is a video tutorial on **how to add Polygon zkEVM Testnet to MetaMask and d
   <source type="video/mp4" src="/img/zkevm/tutorial.mp4"></source>
   <p>Your browser does not support the video element.</p>
 </video>
+
+## Get Started with Web3Modal
+
+:::caution Content disclaimer
+
+Please view the third-party content disclaimer [<ins>here</ins>](https://github.com/0xPolygon/wiki/blob/master/CONTENT_DISCLAIMER.md).
+
+:::
+
+### Overview
+
+[<ins>Web3Modal</ins>](https://web3modal.com/) is a simple and intuitive SDK that provides a drop-in UI to enable users of any wallet to seamlessly log in to applications, offering a unified and smooth experience. It features a streamlined wallet selection interface with automatic detection of various wallet types, including mobile, extension, desktop, and web app wallets.
+
+### Code Sandbox for Polygon
+
+The Web3Modal team has prepared a [<ins>Polygon Code Sandbox</ins>](https://codesandbox.io/p/sandbox/web3modal-v3-polygon-7264l5?file=/src/main.tsx:9,19-9,50). It’s a straightforward way for developers to integrate and get hands-on experience with Polygon.
+
+### How to Integrate
+
+1. **Visit Web3Modal:** Go to [<ins>Web3Modal's official website</ins>](https://web3modal.com/) to explore its features and capabilities.
+2. **Explore the Code Sandbox:** Utilize the [<ins>Polygon Code Sandbox</ins>](https://codesandbox.io/p/sandbox/web3modal-v3-polygon-7264l5?file=/src/main.tsx:9,19-9,50) to demo and understand the integration process.
+3. **Follow the Documentation:** Refer to the provided documentation and instructions to integrate Web3Modal into your projects and leverage its features effectively.
 
 ## zkEVM Support
 

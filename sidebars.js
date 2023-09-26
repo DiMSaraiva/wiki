@@ -8,51 +8,6 @@
 module.exports = {
   /*
    *
-   * *********************** Apps & Tools Section *************************
-   *
-   * This section includes explainer guides and content on common wallets,
-   * tools, applications, and services for the Polygon ecosystem.
-   *
-   * **********************************************************************
-   *
-   */
-
-  /*
-   *
-   * ************************* Governance Section *************************
-   *
-   * This section includes explainer guides and content on the PIP
-   * framework and PoS governance.
-   *
-   * **********************************************************************
-   *
-   */
-
-  govern: [
-    {
-      type: "html",
-      value: "Polygon Governance",
-      className: "sidebar-title",
-    },
-    "governance/index",
-    {
-      type: "category",
-      label: "Polygon Improvement Proposals (PIPs)",
-      link: {
-        type: "generated-index",
-      },
-      items: [
-        "governance/pips/pips-overview",
-        "governance/pips/how-to-propose",
-        "governance/pips/pips-forum",
-        "governance/pips/pips-community-guidelines",
-      ],
-    },
-    "governance/governance-pos",
-  ],
-
-  /*
-   *
    * ************************ PoS Section ********************************
    *
    * This section includes the official product documentation and
@@ -71,11 +26,20 @@ module.exports = {
     "pos/index",
     "pos/getting-started",
     "pos/what-is-polygon-pos",
-    "tools/faucets/matic-faucet",
-    "pos/reference/rpc-endpoints",
-    "pos/reference/commit-chain-multisigs",
-    "pos/reference/mapped-tokens",
-    "tools/faucets/polygon-gas-station",
+    {
+      type: "category",
+      label: "General Reference",
+      link: {
+        type: "generated-index",
+      },
+      items: [
+        "tools/faucets/matic-faucet",
+        "pos/reference/rpc-endpoints",
+        "pos/reference/commit-chain-multisigs",
+        "pos/reference/mapped-tokens",
+        "tools/faucets/polygon-gas-station",
+      ],
+    },
     {
       type: "html",
       value: "Users",
@@ -192,7 +156,6 @@ module.exports = {
           ],
         },
         */
-        "governance/governance-pos",
         {
           type: "category",
           label: "Consensus",
@@ -272,7 +235,7 @@ module.exports = {
                 "pos/design/validator/architecture",
                 "pos/design/validator/responsibilities",
                 "pos/design/validator/core-components/staking",
-                "maintain/polygon-basics/liquid-delegation",
+                //"maintain/polygon-basics/liquid-delegation",
                 "pos/design/validator/rewards",
                 {
                   type: "category",
@@ -465,6 +428,7 @@ module.exports = {
                 "tools/data/the-graph/graph-queries",
               ],
             },
+            "tools/data/flair",
             "tools/data/covalent",
             "tools/data/parsiq",
             //"pos/develop/dapp-fauna-polygon-react",
@@ -498,7 +462,7 @@ module.exports = {
     },
     {
       type: "html",
-      value: "Node Operators",
+      value: "Operators",
       className: "sidebar-title",
     },
     {
@@ -581,6 +545,25 @@ module.exports = {
       "pos/reference/pos-common-commands",
       "pos/reference/pos-errors",
       "pos/pos-faqs",
+      {
+        type: "html",
+        value: "Governance",
+        className: "sidebar-title",
+      },
+      "pos/governance-pos",
+      {
+        type: "category",
+        label: "Proposals",
+        link: {
+          type: "generated-index",
+        },
+        items: [
+          "pips/pips-overview",
+          "pips/how-to-propose",
+          "pips/pips-forum",
+          "pips/pips-community-guidelines",
+        ],
+      },
   ],
 
   /*
@@ -820,6 +803,7 @@ module.exports = {
     },
     "zkevm/index",
     "zkevm/introduction",
+    "zkevm/develop",
     {
       type: "category",
       label: "Start Building",
@@ -828,7 +812,6 @@ module.exports = {
       },
       collapsed: true,
       items: [
-        "zkevm/develop",
         "zkevm/bridge-to-zkevm",
         {
           type: "category",
@@ -913,326 +896,335 @@ module.exports = {
     },
     "zkevm/open-source-repos",
   ],
-
   /*
    *
-   * ************************** Supernets Section *************************
+   * ************************** Edge Section *************************
    *
    * This section includes the official product documentation and
-   * developer guides for Polygon Supernets.
+   * developer guides for Polygon Edge.
    *
    * **********************************************************************
    *
    */
 
-  supernets: [
-    {
-      type: "html",
-      value: "Polygon Supernets",
-      className: "sidebar-title",
+edge:[
+  {
+    type: "html",
+    value: "Polygon Edge",
+    className: "sidebar-title",
+  },
+  "edge/index",
+  "edge/what-is-edge",
+  "edge/operate/quickstart",
+  {
+    type: "category",
+    label: "System Design",
+    link: {
+      type: "generated-index",
     },
-    "supernets/index",
-    "supernets/operate/supernets-quick-start",
-    "supernets/get-started/what-are-supernets",
-    {
-      type: "category",
-      label: "System Design",
-      link: {
-        type: "generated-index",
+    collapsed: true,
+    items: [
+      "edge/design/overview",
+      {
+        type: "category",
+        label: "Consensus",
+        link: {
+          type: "generated-index",
+        },
+        items: [
+          "edge/design/consensus/polybft/polybft-overview",
+          "edge/design/consensus/polybft/ibft-overview",
+        ],
       },
-      collapsed: true,
-      items: [
-        "supernets/design/overview",
-        {
-          type: "category",
-          label: "Consensus",
-          link: {
-            type: "generated-index",
-          },
-          items: [
-            "supernets/design/consensus/polybft/polybft-overview",
-            "supernets/design/consensus/polybft/ibft-overview",
-          ],
+      {
+        type: "category",
+        label: "Bridge",
+        link: {
+          type: "generated-index",
         },
-        {
-          type: "category",
-          label: "Bridge",
-          link: {
-            type: "generated-index",
-          },
-          items: [
-            "supernets/design/bridge/overview",
-            "supernets/design/bridge/statesync",
-            "supernets/design/bridge/checkpoint",
-            {
-              type: "category",
-              label: "Assets",
-              link: {
-                type: "generated-index",
-              },
-              items: [
-                "supernets/design/bridge/assets/erc/erc20",
-                "supernets/design/bridge/assets/erc/erc721",
-                "supernets/design/bridge/assets/erc/erc1155",
-              ],
+        items: [
+          "edge/design/bridge/overview",
+          "edge/design/bridge/statesync",
+          "edge/design/bridge/checkpoint",
+          {
+            type: "category",
+            label: "Assets",
+            link: {
+              type: "generated-index",
             },
-          ],
-        },
-        "supernets/design/supernets-libp2p",
-        {
-          type: "category",
-          label: "Runtime",
-          link: {
-            type: "generated-index",
+            items: [
+              "edge/design/bridge/assets/erc/erc20",
+              "edge/design/bridge/assets/erc/erc721",
+              "edge/design/bridge/assets/erc/erc1155",
+            ],
           },
-          items: [
-            "supernets/design/runtime/supernets-runtime",
-            "supernets/design/runtime/supernets-runtime-allowlist",
-          ],
-        },
-        "supernets/design/supernets-blockchain",
-        "supernets/design/supernets-mempool",
-        "supernets/design/supernets-txpool",
-        "supernets/design/supernets-txrelayer",
-        "supernets/design/supernets-json-rpc",
-        "supernets/design/supernets-grpc",
-      ],
-    },
-    {
-      type: "category",
-      label: "Build a Supernet",
-      link: {
-        type: "generated-index",
+        ],
       },
-      collapsed: true,
-      items: [
-        {
-          type: "category",
-          label: "Prepare Your Environment",
-          link: {
-            type: "generated-index",
-          },
-          collapsed: true,
-          items: [
-            "supernets/operate/supernets-requirements",
-            "supernets/operate/supernets-install",
-          ],
+      "edge/design/libp2p",
+      {
+        type: "category",
+        label: "Runtime",
+        link: {
+          type: "generated-index",
         },
-        "supernets/operate/supernets-ibft-to-polybft",
-        {
-          type: "category",
-          label: "Deploy a Supernet",
-          link: {
-            type: "generated-index",
-          },
-          items: [
-            "supernets/operate/deploy/supernets-deploy-index",
-            "supernets/operate/deploy/supernets-spawn-test-chain",
-            "supernets/operate/deploy/supernets-how-to-generate-genesis",
-            "supernets/operate/deploy/supernets-how-to-configure-rootchain",
-            "supernets/operate/deploy/supernets-genesis-validators",
-            "supernets/operate/deploy/supernets-how-to-start",
-          ],
-        },
-        {
-          type: "category",
-          label: "Operate Your Supernet",
-          link: {
-            type: "generated-index",
-          },
-          collapsed: true,
-          items: [
-            {
-              type: "category",
-              label: "Access Control",
-              link: {
-                type: "generated-index",
-              },
-              collapsed: true,
-              items: [
-                "supernets/operate/deploy/access-control/supernets-allowlist-add-remove",
-              ],
-            },
-            {
-              type: "category",
-              label: "Staking",
-              link: {
-                type: "generated-index",
-              },
-              collapsed: true,
-              items: [
-                "supernets/operate/deploy/staking/supernets-how-to-stake",
-                "supernets/operate/deploy/staking/supernets-unstake",
-              ],
-            },
-            {
-              type: "category",
-              label: "Transfers",
-              link: {
-                type: "generated-index",
-              },
-              collapsed: true,
-              items: [
-                "supernets/operate/deploy/transfers/supernets-cross-chain-deposit",
-                "supernets/operate/deploy/transfers/supernets-cross-chain-withdraw",
-              ],
-            },
-          ],
-        },
-        {
-          type: "category",
-          label: "Upgrade Your Supernet",
-          link: {
-            type: "generated-index",
-          },
-          collapsed: true,
-          items: [
-            "supernets/operate/deploy/upgrades/supernets-how-to-upgrade",
-            "supernets/operate/deploy/upgrades/supernets-v1.1-hardforks",
-          ],
-        },
-      ],
-    },
-    {
-      type: "category",
-      label: "Reference",
-      link: {
-        type: "generated-index",
+        items: [
+          "edge/design/runtime/runtime",
+          "edge/design/runtime/runtime-allowlist",
+        ],
       },
-      collapsed: true,
-      items: [
-        "supernets/operate/supernets-param-reference",
-        {
-          type: "category",
-          label: "Smart Contract Interfaces",
-          link: {
-            type: "generated-index",
-          },
-          collapsed: true,
-          items: [
-            {
-              type: "category",
-              label: "ERC-20",
-              link: {
-                type: "generated-index",
-              },
-              items: [
-                "supernets/interfaces/erc20/native-erc20",
-                "supernets/interfaces/erc20/childerc20",
-                "supernets/interfaces/erc20/childerc20-predicate",
-                "supernets/interfaces/erc20/rooterc20-predicate",
-              ],
-            },
-            {
-              type: "category",
-              label: "ERC-721",
-              link: {
-                type: "generated-index",
-              },
-              items: [
-                "supernets/interfaces/erc721/childerc721",
-                "supernets/interfaces/erc721/childerc721-predicate",
-                "supernets/interfaces/erc721/rooterc721-predicate",
-              ],
-            },
-            {
-              type: "category",
-              label: "ERC-1155",
-              link: {
-                type: "generated-index",
-              },
-              items: [
-                "supernets/interfaces/erc1155/childerc1155",
-                "supernets/interfaces/erc1155/childerc1155-predicate",
-                "supernets/interfaces/erc1155/rooterc1155-predicate",
-              ],
-            },
-            "supernets/interfaces/eip1559-interface",
-            {
-              type: "category",
-              label: "Network",
-              link: {
-                type: "generated-index",
-              },
-              items: [
-                "supernets/interfaces/network/checkpoint-manager",
-                "supernets/interfaces/network/exit-helper",
-                "supernets/interfaces/network/state-receiver",
-                "supernets/interfaces/network/state-sender",
-              ],
-            },
-            {
-              type: "category",
-              label: "Validators",
-              link: {
-                type: "generated-index",
-              },
-              items: [
-                "supernets/interfaces/validators/validator",
-                "supernets/interfaces/validators/validator-set-base",
-                "supernets/interfaces/validators/root-validator-set",
-              ],
-            },
-            {
-              type: "category",
-              label: "Staking",
-              link: {
-                type: "generated-index",
-              },
-              items: [
-                "supernets/interfaces/staking/stake-manager-interface",
-                "supernets/interfaces/staking/supernet-manager-interface",
-                "supernets/interfaces/staking/custom-supernet-manager-interface",
-              ],
-            },
-            {
-              type: "category",
-              label: "Cryptography",
-              link: {
-                type: "generated-index",
-              },
-              items: [
-                "supernets/interfaces/cryptography/bls",
-                "supernets/interfaces/cryptography/bn256g2",
-              ],
-            },
-          ],
-        },
-        {
-          type: "category",
-          label: "RPC API Reference",
-          link: {
-            type: "generated-index",
-          },
-          collapsed: true,
-          items: [
-            "supernets/api/json-rpc-eth",
-            "supernets/api/json-rpc-net",
-            "supernets/api/json-rpc-web3",
-            "supernets/api/json-rpc-txpool",
-            "supernets/api/json-rpc-debug",
-            "supernets/api/json-rpc-bridge",
-          ],
-        },
-        "supernets/operate/supernets-performance",
-      ],
+      "edge/design/blockchain",
+      "edge/design/mempool",
+      "edge/design/txpool",
+      "edge/design/txrelayer",
+      "edge/design/json-rpc",
+      "edge/design/grpc",
+    ],
+  },
+  {
+    type: "category",
+    label: "Build an Edge-Powered Chain",
+    link: {
+      type: "generated-index",
     },
-    "supernets/supernets-faq",
-  ],
+    collapsed: true,
+    items: [
+      {
+        type: "category",
+        label: "Prepare Your Environment",
+        link: {
+          type: "generated-index",
+        },
+        collapsed: true,
+        items: [
+          "edge/operate/requirements",
+          "edge/operate/install",
+        ],
+      },
+      "edge/operate/ibft-to-polybft",
+      {
+        type: "category",
+        label: "Deploy a Chain",
+        link: {
+          type: "generated-index",
+        },
+        items: [
+          "edge/operate/deploy/deploy-index",
+          "edge/operate/deploy/spawn-test-chain",
+          "edge/operate/deploy/how-to-generate-genesis",
+          "edge/operate/deploy/how-to-configure-rootchain",
+          "edge/operate/deploy/genesis-validators",
+          "edge/operate/deploy/how-to-start",
+        ],
+      },
+      {
+        type: "category",
+        label: "Operate Your Chain",
+        link: {
+          type: "generated-index",
+        },
+        collapsed: true,
+        items: [
+          {
+            type: "category",
+            label: "Access Control",
+            link: {
+              type: "generated-index",
+            },
+            collapsed: true,
+            items: [
+              "edge/operate/deploy/access-control/allowlist-add-remove",
+            ],
+          },
+          {
+            type: "category",
+            label: "Staking",
+            link: {
+              type: "generated-index",
+            },
+            collapsed: true,
+            items: [
+              "edge/operate/deploy/staking/how-to-stake",
+              "edge/operate/deploy/staking/unstake",
+            ],
+          },
+          {
+            type: "category",
+            label: "Transfers",
+            link: {
+              type: "generated-index",
+            },
+            collapsed: true,
+            items: [
+              "edge/operate/deploy/transfers/cross-chain-deposit",
+              "edge/operate/deploy/transfers/cross-chain-withdraw",
+            ],
+          },
+        ],
+      },
+      {
+        type: "category",
+        label: "Upgrade Your Chain",
+        link: {
+          type: "generated-index",
+        },
+        collapsed: true,
+        items: [
+          "edge/operate/deploy/upgrades/how-to-upgrade",
+          "edge/operate/deploy/upgrades/v1.1-hardforks",
+        ],
+      },
+    ],
+  },
+  {
+    type: "category",
+    label: "Reference",
+    link: {
+      type: "generated-index",
+    },
+    collapsed: true,
+    items: [
+      "edge/operate/param-reference",
+      {
+        type: "category",
+        label: "Smart Contract Interfaces",
+        link: {
+          type: "generated-index",
+        },
+        collapsed: true,
+        items: [
+          {
+            type: "category",
+            label: "ERC-20",
+            link: {
+              type: "generated-index",
+            },
+            items: [
+              "edge/interfaces/erc20/native-erc20",
+              "edge/interfaces/erc20/childerc20",
+              "edge/interfaces/erc20/childerc20-predicate",
+              "edge/interfaces/erc20/rooterc20-predicate",
+            ],
+          },
+          {
+            type: "category",
+            label: "ERC-721",
+            link: {
+              type: "generated-index",
+            },
+            items: [
+              "edge/interfaces/erc721/childerc721",
+              "edge/interfaces/erc721/childerc721-predicate",
+              "edge/interfaces/erc721/rooterc721-predicate",
+            ],
+          },
+          {
+            type: "category",
+            label: "ERC-1155",
+            link: {
+              type: "generated-index",
+            },
+            items: [
+              "edge/interfaces/erc1155/childerc1155",
+              "edge/interfaces/erc1155/childerc1155-predicate",
+              "edge/interfaces/erc1155/rooterc1155-predicate",
+            ],
+          },
+          "edge/interfaces/eip1559-interface",
+          {
+            type: "category",
+            label: "Network",
+            link: {
+              type: "generated-index",
+            },
+            items: [
+              "edge/interfaces/network/checkpoint-manager",
+              "edge/interfaces/network/exit-helper",
+              "edge/interfaces/network/state-receiver",
+              "edge/interfaces/network/state-sender",
+            ],
+          },
+          {
+            type: "category",
+            label: "Validators",
+            link: {
+              type: "generated-index",
+            },
+            items: [
+              "edge/interfaces/validators/validator",
+              "edge/interfaces/validators/validator-set-base",
+              "edge/interfaces/validators/root-validator-set",
+            ],
+          },
+          {
+            type: "category",
+            label: "Staking",
+            link: {
+              type: "generated-index",
+            },
+            items: [
+              "edge/interfaces/staking/stake-manager-interface",
+              "edge/interfaces/staking/supernets-manager-interface",
+              "edge/interfaces/staking/custom-supernet-manager-interface",
+            ],
+          },
+          {
+            type: "category",
+            label: "Cryptography",
+            link: {
+              type: "generated-index",
+            },
+            items: [
+              "edge/interfaces/cryptography/bls",
+              "edge/interfaces/cryptography/bn256g2",
+            ],
+          },
+        ],
+      },
+      {
+        type: "category",
+        label: "RPC API Reference",
+        link: {
+          type: "generated-index",
+        },
+        collapsed: true,
+        items: [
+          "edge/api/json-rpc-eth",
+          "edge/api/json-rpc-net",
+          "edge/api/json-rpc-web3",
+          "edge/api/json-rpc-txpool",
+          "edge/api/json-rpc-debug",
+          "edge/api/json-rpc-bridge",
+        ],
+      },
+      "edge/operate/performance",
+    ],
+  },
+  "edge/faq",
+],
+  /*
+   *
+   * ************************** CDK Section *************************
+   *
+   * This section includes the official product documentation and
+   * developer guides for Polygon CDK.
+   *
+   * **********************************************************************
+   *
+   */
 
   cdk: [
     {
       type: "html",
-      value: "Polygon CDK",
+      value: "Polygon Chain Development Kit",
       className: "sidebar-title",
     },
     "cdk/index",
     "cdk/what-is-polygon-cdk",
-    "cdk/validium-attributes",
-    "cdk/dac-overview",
+    "cdk/validium/quickstart",
+    "cdk/validium/validium-attributes",
+    "cdk/validium/dac-overview",
+    "cdk/validium/differences-validium-zkevm",
     "cdk/cdk-program",
-    "cdk/differences-validium-zkevm",
-    "cdk/quickstart",
   ],
 
  /*

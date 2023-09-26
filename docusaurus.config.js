@@ -1,5 +1,6 @@
 const math = require('remark-math');
 const katex = require('rehype-katex');
+const redirects = require('./redirects');
 
 module.exports = {
   title: "Polygon Wiki",
@@ -17,184 +18,7 @@ module.exports = {
     [
       '@docusaurus/plugin-client-redirects',
       {
-        redirects: [
-          {
-            to: '/',
-            from: ['/en/latest', '/en/'],
-          },
-          // heimdall
-          {
-            to: '/docs/pos/design/heimdall/antehandler',
-            from: '/docs/pos/heimdall/antehandler',
-          },
-          {
-            to: '/docs/pos/design/heimdall/checkpoint',
-            from: '/docs/pos/heimdall/checkpoint',
-          },
-          {
-            to: '/docs/pos/design/heimdall/encoder',
-            from: '/docs/pos/heimdall/encoder',
-          },
-          {
-            to: '/docs/pos/design/heimdall/overview',
-            from: '/docs/pos/heimdall/overview',
-          },
-          {
-            to: '/docs/pos/design/heimdall/peppermint',
-            from: '/docs/pos/heimdall/peppermint',
-          },
-          {
-            to: '/docs/pos/design/heimdall/stdtx',
-            from: '/docs/pos/heimdall/stdtx',
-          },
-          {
-            to: '/docs/pos/design/heimdall/transactions',
-            from: '/docs/pos/heimdall/transactions',
-          },
-          {
-            to: '/docs/pos/design/heimdall/types',
-            from: '/docs/pos/heimdall/types',
-          },
-          {
-            to: '/docs/pos/design/heimdall/validator-key-management',
-            from: '/docs/pos/heimdall/validator-key-management',
-          },
-          {
-            to: '/docs/pos/design/heimdall/validators',
-            from: '/docs/pos/heimdall/validators',
-          },
-          // bor
-          {
-            to: '/docs/pos/design/bor',
-            from: '/docs/pos/bor',
-          },
-          {
-            to: '/docs/pos/design/bor/consensus',
-            from: '/docs/pos/bor/consensus',
-          },
-          {
-            to: '/docs/pos/design/bor/core_concepts',
-            from: '/docs/pos/bor/core_concepts',
-          },
-          {
-            to: '/docs/pos/design/bor/overview',
-            from: '/docs/pos/bor/overview',
-          },
-          // state-sync
-          {
-            to: '/docs/pos/design/bridge/state-sync/how-state-sync-works',
-            from: '/docs/pos/state-sync/how-state-sync-works',
-          },
-          {
-            to: '/docs/pos/design/bridge/state-sync/state-sync',
-            from: '/docs/pos/state-sync/state-sync',
-          },
-          // l1-l2-communication
-          {
-            to: '/docs/pos/design/bridge/l1-l2-communication/ethereum-to-matic',
-            from: '/docs/pos/l1-l2-communication/ethereum-to-matic',
-          },
-          {
-            to: '/docs/pos/design/bridge/l1-l2-communication/fx-portal',
-            from: '/docs/pos/l1-l2-communication/fx-portal',
-          },
-          {
-            to: '/docs/pos/design/bridge/l1-l2-communication/matic-to-ethereum',
-            from: '/docs/pos/l1-l2-communication/matic-to-ethereum',
-          },
-          {
-            to: '/docs/pos/design/bridge/l1-l2-communication/state-transfer',
-            from: '/docs/pos/l1-l2-communication/state-transfer',
-          },
-          {
-            to: '/docs/pos/design/bridge/l1-l2-communication/fx-portal/fx-example',
-            from: '/docs/pos/l1-l2-communication/fx-portal/fx-example',
-          },
-          {
-            to: '/docs/pos/design/bridge/ethereum-polygon/tools/widget',
-            from: '/docs/pos/ethereum-polygon/tools/widget',
-          },
-          //pos node operate
-          {
-            to: '/docs/pos/operate/node/full-node-deployment',
-            from: '/docs/operate/full-node-binaries',
-          },
-          {
-            to: '/docs/pos/operate/node/full-node-deployment',
-            from: '/docs/operate/full-node-docker',
-          },
-          {
-            to: '/docs/pos/operate/node/full-node-deployment',
-            from: '/docs/operate/full-node-gcp',
-          },
-          {
-            to: '/docs/pos/operate/node/full-node-deployment',
-            from: '/docs/operate/full-node',
-          },
-          {
-            to: '/docs/pos/operate/node/full-node-deployment',
-            from: '/docs/operate/full-node-deployment',
-          },
-          {
-            to: '/docs/pos/operate/node/erigon-client',
-            from: '/docs/operate/erigon-client',
-          },
-          {
-            to: '/docs/pos/operate/node/erigon-client',
-            from: '/docs/operate/archive-node',
-          },
-          {
-            to: '/docs/pos/operate/node/erigon-client',
-            from: '/docs/operate/setup-archive-node',
-          },
-          //pos operate
-          {
-            to: '/docs/pos/design/gas-token',
-            from: '/docs/operate/gas-token',
-          },
-          {
-            to: '/docs/pos/reference/contracts/genesis-contracts',
-            from: '/docs/operate/genesis-contracts',
-          },
-          {
-            to: '/docs/pos/reference/mapped-tokens',
-            from: '/docs/operate/mapped-tokens',
-          },
-          {
-            to: '/docs/pos/reference/rpc-endpoints',
-            from: '/docs/operate/network-rpc-endpoints',
-          },
-          {
-            to: '/docs/pos/reference/default-ports',
-            from: '/docs/operate/default-ports',
-          },
-          {
-            to: '/docs/pos/reference/snapshot-instructions-heimdall-bor',
-            from: '/docs/operate/snapshot-instructions-heimdall-bor',
-          },
-          {
-            to: '/docs/pos/validator/validator-node-system-requirements',
-            from: '/docs/operate/technical-requirements',
-          },
-          //faqs
-          {
-            to: '/docs/pos/pos-faqs',
-            from: '/docs/faq/technical-faqs',
-          },
-          //wallets
-          {
-            to: '/docs/tools/wallets/getting-started',
-            from: '/docs/develop/wallets/getting-started',
-          },
-          {
-            to: '/docs/tools/wallets/polygon-web-wallet/web-wallet-v3-guide',
-            from: '/docs/develop/wallets/polygon-web-wallet/web-wallet-v3-guide',
-          },
-          {
-            to: '/docs/tools/wallets/adding-a-custom-token',
-            from: '/docs/develop/wallets/adding-a-custom-token',
-          },
-        ],
+        redirects: redirects,
       },
     ],
   ],
@@ -255,18 +79,12 @@ module.exports = {
           title: "Reference",
           items: [
             {
-              label: "Whitepaper",
+              label: "Original Whitepaper",
               href: "https://github.com/maticnetwork/whitepaper/"
             },
-            /* Commenting out until a working link is available
             {
-              label: "Lightpaper",
-              href: "https://polygon.technology/lightpaper-polygon.pdf"
-            },
-            */
-            {
-              label: "Miden",
-              href: "/docs/miden/design/main"
+              label: "POL Whitepaper",
+              href: "https://polygon.technology/papers/pol-whitepaper"
             },
           ]
         },
@@ -402,102 +220,181 @@ module.exports = {
           rel: null,
         },
         {
-          label: "Polygon Stack",
-          position: "left",
-          items: [
-            {
-              href: '/docs/pos/',
-              label: 'PoS',
-              target: '_self',
-              rel: null,
-            },
-            {
-              href: '/docs/zkevm/',
-              label: 'zkEVM',
-              target: '_self',
-              rel: null,
-            },
-            {
-              href: '/docs/supernets/',
-              label: 'Supernets',
-              target: '_self',
-              rel: null,
-            },
-            {
-              href: '/docs/miden/',
-              label: 'Miden',
-              target: '_self',
-              rel: null,
-            },
-            {
-              href: 'https://devs.polygonid.com/',
-              label: 'ID',
-              target: '_self',
-              rel: null,
-            },
-          ],
-        },
-        {
-          label: "Polygon 2.0",
+          label: "CDK",
           position: "left",
           items: [
             {
               href: '/docs/cdk',
-              label: 'Polygon CDK',
+              label: 'Welcome to the CDK',
+              target: '_self',
+              rel: null,
+            },
+            {
+              href: '/docs/cdk/validium/quickstart/',
+              label: 'Get Started with the Validium',
+              target: '_self',
+              rel: null,
+            },
+            {
+              href: '/docs/cdk/validium/validium-attributes/',
+              label: 'Validium System Attributes',
+              target: '_self',
+              rel: null,
+            },
+            {
+              href: '/docs/cdk/validium/dac-overview/',
+              label: 'Data Availability',
               target: '_self',
               rel: null,
             },
           ],
         },
         {
-          label: "Apps & Tools",
+          label: "zkEVM",
           position: "left",
+          items: [
+            {
+              href: '/docs/zkevm/',
+              label: 'Welcome to zkEVM',
+              target: '_self',
+              rel: null,
+            },
+            {
+              to: '/docs/category/start-building/',
+              label: 'Build a dApp',
+              target: '_self',
+              rel: null,
+            },
+            {
+              href: '/docs/category/setup-zknode/',
+              label: 'Run a Node',
+              target: '_self',
+              rel: null,
+            },
+            {
+              to: '/docs/category/deploy-zkevm/',
+              label: 'Launch Your zkEVM',
+              target: '_self',
+              rel: null,
+            },
+            {
+              href: '/docs/category/zkevm/',
+              label: 'Pre-Specs',
+              target: '_self',
+              rel: null,
+            },
+          ],
+        },
+        {
+          label: "PoS",
+          position: "left",
+          items: [
+            {
+              href: '/docs/pos/',
+              label: 'Welcome to PoS',
+              target: '_self',
+              rel: null,
+            },
+            {
+              href: '/docs/category/system-design/',
+              label: 'Learn about PoS',
+              target: '_self',
+              rel: null,
+            },
+            {
+              to: '/docs/category/build-a-dapp/',
+              label: 'Build a dApp',
+              target: '_self',
+              rel: null,
+            },
+            {
+              href: '/docs/category/become-a-validator/',
+              label: 'Become a Validator',
+              target: '_self',
+              rel: null,
+            },
+            {
+              to: '/docs/category/proposals/',
+              label: 'Create Proposals',
+              target: '_self',
+              rel: null,
+            },
+          ],
+        },
+        {
+          label: "Edge",
+          position: "left",
+          items: [
+            {
+              href: '/docs/edge/',
+              label: 'Welcome to Edge',
+              target: '_self',
+              rel: null,
+            },
+            {
+              href: '/docs/edge/operate/quickstart/',
+              label: 'Get Started with Edge',
+              target: '_self',
+              rel: null,
+            },
+            {
+              href: '/docs/category/system-design-1/',
+              label: 'Learn about Edge',
+              target: '_self',
+              rel: null,
+            },
+            {
+              to: '/docs/category/build-an-edge-powered-chain/',
+              label: 'Deploy a Chain',
+              target: '_self',
+              rel: null,
+            },
+          ],
+        },
+        {
+          label: "Miden",
+          position: "left",
+          items: [
+            {
+              href: '/docs/miden/',
+              label: 'Welcome to Miden',
+              target: '_self',
+              rel: null,
+            },
+            {
+              href: '/docs/miden/intro/main/',
+              label: 'Learn about Miden',
+              target: '_self',
+              rel: null,
+            },
+            {
+              href: '/docs/miden/user_docs/usage/',
+              label: 'Use the MidenVM',
+              target: '_self',
+              rel: null,
+            },
+            {
+              href: '/docs/category/miden-vm/',
+              label: 'Pre-Specs',
+              target: '_self',
+              rel: null,
+            },
+          ],
+        },
+        {
+          to: 'https://devs.polygonid.com/',
+          label: 'ID',
+          position: "left",
+          target: '_blank',
+          rel: null,
+        },
+        {
+          label: "Apps & Tools",
+          position: "right",
           items: [
             {
               href: '/docs/tools/matic-js/get-started',
               label: 'Matic.js',
-              target: '_self',
-              rel: null,
-            },
-          ],
-        },
-        {
-          label: "Participate",
-          position: "left",
-          items: [
-            {
-              href: '/docs/delegate/delegate',
-              label: 'Delegate MATIC',
-              target: '_self',
-              rel: null,
-            },
-            {
-              href: '/docs/category/run-a-validator-node',
-              label: 'Run a PoS Validator',
-              target: '_self',
-              rel: null,
-            },
-            {
-              href: '/docs/governance',
-              label: 'Governance',
-              target: '_self',
-              rel: null,
-            },
-          ],
-        },
-        {
-          label: "Pre-Specs",
-          position: "left",
-          items: [
-            {
-              href: '/docs/category/zkevm/',
-              label: 'zkEVM',
-              target: '_self',
-              rel: null,
-            },
-            {
-              to: '/docs/category/miden-vm',
-              label: 'Miden',
               target: '_self',
               rel: null,
             },
